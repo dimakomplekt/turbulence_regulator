@@ -13,13 +13,13 @@ In plasma spraying, the hydrodynamic regime of the plasma jet directly affects h
 This controller modifies a standard plasma torch power supply circuit by introducing high-frequency, low-duty-cycle switching of a portion of the arc power between the main anode and the pilot arc (input section) electrode. This creates controlled transverse flow fluctuations without significantly altering the total average load power (<5% power deviation at duty cycles $D \le 12\%$).
 
 
-## Sheme
+## Hardware Schematic
 
 <p>
   <img src="diary/regulator.png" alt="Device Circuit Diagram" width="750"/>
 </p>
 
-## Bill of Materials (BOM)
+## Bill of Materials
 
 | Designator | Component | Key Specifications |
 | :--- | :--- | :--- |
