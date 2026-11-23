@@ -56,10 +56,10 @@ This controller modifies a standard plasma torch power supply circuit by introdu
 * **MCU:** ESP32 (`ESP-WROOM-32 DevKit v1`)
 * **Framework:** ESP-IDF (`ledc.h`, `gpio.h`, `esp_random.h`)
 * **Peripherals & Libraries:**
-  * [async_await](https://github.com) — Non-blocking asynchronous delays
+  * [async_await](https://github.com/dimakomplekt/async_await) — Non-blocking asynchronous delays
   * [button_control](https://github.com/dimakomplekt/button_control) — Button state handling & software debouncing
-  * [encoder_control](https://github.com) — Rotary encoder processing
-  * [ESP-I2C-OLED](https://github.com) — OLED display driver
+  * [encoder_control](https://github.com/dimakomplekt/encoder_control) — Rotary encoder processing
+  * [ESP-I2C-OLED](https://github.com/baoshi/ESP-I2C-OLED/tree/master) — OLED display driver
 
 ---
 
