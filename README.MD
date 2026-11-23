@@ -2,10 +2,6 @@
 
 Firmware and hardware architecture for an isolated plasma flow turbulence degree controller designed to improve heat transfer and material deposition efficiency during electric arc plasma spraying.
 
-<p align="center">
-  <img src="diary/regulator.png" alt="Device Circuit Diagram" width="750"/>
-</p>
-
 Based on research conducted at Peter the Great St. Petersburg Polytechnic University (SPbPU) and published in *Elektrichestvo* (No. 9, 2026).
 
 ---
@@ -15,6 +11,32 @@ Based on research conducted at Peter the Great St. Petersburg Polytechnic Univer
 In plasma spraying, the hydrodynamic regime of the plasma jet directly affects heat transfer between the arc plasma and fine metallic powder particles. Experimental results demonstrate that operating the plasma jet in the **laminar-turbulent transition regime** maximizes heat transfer efficiency and increases material utilization (up to +9% efficiency gain compared to unmodulated operation) while avoiding the performance drop caused by excessive turbulence.
 
 This controller modifies a standard plasma torch power supply circuit by introducing high-frequency, low-duty-cycle switching of a portion of the arc power between the main anode and the pilot arc (input section) electrode. This creates controlled transverse flow fluctuations without significantly altering the total average load power (<5% power deviation at duty cycles $D \le 12\%$).
+
+
+## Sheme
+
+<p align="center">
+  <img src="diary/regulator.png" alt="Device Circuit Diagram" width="750"/>
+</p>
+
+## Bill of Materials (BOM)
+
+| Designator | Component | Key Specifications |
+| :--- | :--- | :--- |
+| **MCU** | ESP-WROOM-32 DevKit v1 | ESP32 microcontroller development board |
+| **Display** | I2C OLED Display | 128×64 px |
+| **ENC1, ENC2** | Rotary Encoder Module | Incremental rotary encoder with push button |
+| **SB1** | Tactile Push Button | Momentary switch (normally open) |
+| **DA1** | HCPL-3120-000E | Gate drive optocoupler, 2.0 A output current, 12–24 V |
+| **VT1** | IRGP4063PBF | Trench IGBT power switch ($V_{CES} = 600\text{ V}$, $V_{GE} = \pm 20\text{ V}$, $I_C = 96\text{ A}$) |
+| **RU1** | VDR-07D751 | Metal oxide varistor ($460\text{ V AC}$ / $615\text{ V DC}$) |
+| **VD1, VD2** | 1N5363BG | Zener diode (30 V, 5 W) |
+| **R1** | Gate Resistor | $10\ \Omega$ (pulse generator stage) |
+| **R2** | Protective Ballast Resistor | $0.75\ \Omega$ / $1.5\ \Omega$ / $3\ \Omega$ (power line protection) |
+| **R3** | Interrupt Sense Resistor | $10\ \Omega$ (hardware pulse counting feedback) |
+| **C1** | Decoupling Capacitor | $0.1\ \mu\text{F}$ (pulse generator stage) |
+| **QF1** | Circuit Breaker | 16 A, Type C tripping curve |
+
 
 ---
 
