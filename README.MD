@@ -1,4 +1,4 @@
-# Plasma Jet Turbulence Degree Controller (ESP32)
+# Plasma jet turbulence degree controller (ESP32)
 
 Firmware and hardware architecture for an isolated plasma flow turbulence degree controller designed to improve heat transfer and material deposition efficiency during electric arc plasma spraying.
 
