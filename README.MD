@@ -15,7 +15,7 @@ This controller modifies a standard plasma torch power supply circuit by introdu
 
 ## Sheme
 
-<p align="center">
+<p>
   <img src="diary/regulator.png" alt="Device Circuit Diagram" width="750"/>
 </p>
 
